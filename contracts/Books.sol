@@ -25,6 +25,7 @@ contract Books is ERC721Enumerable {
     );
 
     mapping(address => mapping(uint256 => BookStruct)) public booksByOwner;
+    mapping(uint256 => string) public tokenToUrl;
 
     constructor() ERC721("Books", "BOOK") {}
 
@@ -44,6 +45,7 @@ contract Books is ERC721Enumerable {
         });
 
         booksByOwner[address(this)][nextTokenId] = bs;
+        tokenToUrl[nextTokenId] = _url;
 
         nextTokenId = nextTokenId += 1;
         return bs;
@@ -53,9 +55,8 @@ contract Books is ERC721Enumerable {
         return "https://ipfs.io/ipfs/";
     }
 
-    function getBaseURI() external pure returns (string memory) {
-        return "https://ipfs.io/ipfs/";
-    }
-
+    // function getBaseURI() external pure returns (string memory) {
+    //     return "https://ipfs.io/ipfs/";
+    // }
     // retrieve funds?
 }
