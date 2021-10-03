@@ -3,10 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@fleekhq/fleek-storage-js": "^1.0.20",
     "@openzeppelin/contracts": "^4.3.2",
     "@truffle/hdwallet-provider": "^1.5.0",
     "dotenv": "^10.0.0",
     "ethers": "^5.4.7",
+    "ipfs-http-client": "^53.0.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "^4.0.3",

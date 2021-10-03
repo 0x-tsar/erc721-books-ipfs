@@ -53,5 +53,9 @@ contract Books is ERC721Enumerable {
         return "https://ipfs.io/ipfs/";
     }
 
+    function getBaseURI() external pure returns (string memory) {
+        return "https://ipfs.io/ipfs/";
+    }
+
     // retrieve funds?
 }
