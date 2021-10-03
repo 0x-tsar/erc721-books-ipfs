@@ -259,51 +259,61 @@ function App() {
               <div>{item.title}</div>
               <div>{item.price}</div>
               <div>{item.owner}</div>
-              <img
-                style={{
-                  minWidth: "200px",
-                  minHeight: "300px",
-                  // width: "100px",
-                  // height: "100px",
-                  background: "rgba(0, 0, 0, 0.3)",
-                  // uploads/2016/11/house-placeholder.jpg?ssl=1) no-repeat scroll 0 0;
-                  // background: url(https://i0.wp.com/reviveyouthandfamily.org/wp-content/uploads/2016/11/house-placeholder.jpg?ssl=1) no-repeat scroll 0 0;
-                }}
-                src={`https://ipfs.io/ipfs/${item.url}`}
-                placeholder
-                alt="book img"
-                width="200"
-              />
 
-              <br></br>
+              <div>
+                <img
+                  style={{
+                    position: "absolute",
+                    marginLeft: 80,
+                    marginTop: 130,
+                    zIndex: -1,
+                  }}
+                  src="https://c.tenor.com/5o2p0tH5LFQAAAAi/hug.gif"
+                  width="40px"
+                  height="40px"
+                ></img>
+                <img
+                  style={{
+                    minWidth: "200px",
+                    minHeight: "300px",
+                    background: "rgba(0, 0, 0, 0.3)",
+                  }}
+                  src={`https://ipfs.io/ipfs/${item.url}`}
+                  placeholder
+                  alt="book img"
+                  width="200"
+                />
+
+                <br></br>
+              </div>
             </div>
           );
         })}
       </div>
 
-      <button
+      {/* <button
         onClick={async () => {
-          // const value = Web3.utils.toWei("0.001");
-          // console.log(parseInt(value));
-          // console.log(info.currentAddress);
-          // console.log(info.bookContract);
-          // const bookUrl =
-          // const tx = await info.bookContract.methods
-          //   .createNewBook("book 2", value, bookUrl)
-          //   .send({ from: info.currentAddress });
-          // console.log(tx);
-          // try {
-          //   await contracts.bank.methods
-          //     .deposit()
-          //     .send({ value: amount.toString(), from: currentUser });
-          // } catch (e) {
-          //   console.log("Error, deposit: ", e);
-          // }
-          //
+          const value = Web3.utils.toWei("0.001");
+          console.log(parseInt(value));
+          console.log(info.currentAddress);
+          console.log(info.bookContract);
+          const bookUrl =
+          const tx = await info.bookContract.methods
+            .createNewBook("book 2", value, bookUrl)
+            .send({ from: info.currentAddress });
+          console.log(tx);
+          try {
+            await contracts.bank.methods
+              .deposit()
+              .send({ value: amount.toString(), from: currentUser });
+          } catch (e) {
+            console.log("Error, deposit: ", e);
+          }
+          
         }}
       >
         Create new book
-      </button>
+      </button> */}
     </div>
   );
 }
